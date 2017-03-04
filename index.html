@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Example</title>
+
+      <link href="https://fonts.googleapis.com/css?family=Heebo:500,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <script src="https://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body class="container-fluid">
+
+    <div id="msg" style="font-size:largest;">
+      Loading, please wait...
+    </div>
+
+    <div id="body" style="">
+    <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
+
+      <div class="menu-btn" id="menu-toggle">
+        <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
+        <div class="auth-menu-btn menu-item"><i class="ion-person"></i></div>
+        <div class="stats-menu-btn menu-item"><i class="ion-stats-bars"></i></div>
+        <div class="bucketlist-menu-btn menu-item"><i class="ion-ios-box"></i></div>
+        <div class="mask2 menu-item menu-toggle" id="mask2"><i class="ion-navicon-round"></i></div>
+
+      </div>
+
+      <div class="homepage hpstyle active-view">
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+          <img src="assets/styles/images/deathbucket.png" alt="#" class="deathbucket"/>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+          <h1>Take charge of your future</h1>
+          <p> Create meaningful events to be completed before your time is
+              up. After errands, work, caring for someone, we are left with
+              years to be dedicated to do the things you care about.
+              Calculate the time you have left.
+          </p>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <h1>Our data</h1>
+            <p>We measured the average age at death of the USA population.
+              Also, only 10% of our life is actually considered purely "me-
+              time." That's 8 years or 2,922 days out of 29,220 days of life
+              we got. Let's use them wisely.
+            </p>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+      </div>
+
+      <div class="auth-forms inactive-view">
+
+        <ul class="auth-tabs">
+          <li class="">Sign in</li>
+          <li class="active">Sign up</li>
+        </ul>
+        <div id="sign-up-form" class="active-form form">
+          <form class="sign-up-form">
+            <input name="credentials[userName]" type="text" class="form-control" placeholder="Username">
+            <input name="credentials[yearOfBirth]" type="text" class="form-control" placeholder="Year of birth">
+            <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm password">
+            <input class="btn btn-primary submit" id="sign-up" type="Submit" value="Sign up">
+          </form>
+        </div>
+
+        <div id="sign-in-form" class="inactive-form form">
+          <form class="sign-in-form">
+            <input id="username" name="credentials[userName]" type="text" class="form-control" placeholder="Username">
+            <input id="signInPassword" name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            <input class="btn btn-primary submit" id="sign-in" type="Submit" value="Sign in">
+          </form>
+        </div>
+
+        <div class="changePw active-form">
+          <form class="user-forms-pw" id="change-password">
+            <fieldset>
+              <div class="selector change-pw-selector">Change password</div>
+              <input id="currentPassword" class="form-control" type="password" name="passwords[old]" placeholder="Old password">
+              <input id="newPassword" class="form-control" type="password" name="passwords[new]" placeholder="New password">
+              <input id="changePasswordButton" class="btn btn-info" type="submit" name="submit" value="Change!">
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="tasks inactive-view">
+
+      <button class="get-tasks-btn" type="submit" name="submit">Get tasks</button>
+
+      <ul class="task-list"></ul>
+
+      <div class="user-forms">
+
+        <ul class="task-tabs">
+          <li>Create task</li>
+        </ul>
+
+        <div class="create-task-form-div">
+
+          <form class="create-task-form">
+            <input name="tasks[title]" type="text" class="form-control" placeholder="Title">
+            <input name="tasks[description]" type="text" class="form-control" placeholder="description">
+            <input class="btn btn-primary submit" id="create" type="Submit" value="Create">
+          </form>
+        </div>
+
+        <form class="show-task">
+          <input name="tasks[_id]" type="text" class="form-control" placeholder="task id">
+          <input class="btn btn-primary submit" id="show" type="Submit" value="Show">
+        </form>
+
+        <ul class="show"></ul>
+
+        </div>
+
+      </div>
+
+      <div class="data inactive-view">
+
+      <svg id="fillgauge2" width="200" height="200" onclick="gauge2.update(NewValue());"></svg>
+
+<!--       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script> -->
+      </div>
+
+    </div>
+
+    </body>
+</html>   </div>
+
+    </body>
+</html>
